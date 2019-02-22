@@ -24,7 +24,7 @@ public class Todo {
 
     @ManyToOne
     @JoinColumn(name = "userid", nullable = false)
-    @JsonIgnore
+//    @JsonIgnore
     private Users user;
 
     public Todo() {

@@ -60,7 +60,7 @@ public class TodoController {
             @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
     })
     @GetMapping("/users/userid/{userid}")
-    public Users getUserBasedOffUserID(Integer userid){
+    public Users getUserBasedOffUserID(@PathVariable Integer userid){
         return userRepository.findById(userid).orElseThrow();
     }
 
@@ -163,10 +163,10 @@ public class TodoController {
             @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
     })
     @PutMapping("/todos/todoid/{todoid}")
-    public Todo updateTodo(@RequestBody Todo newTodo, @PathVariable Integer todoID) throws URISyntaxException{
-        Optional<Todo> todoUpdate = todoRepository.findById(todoID);
+    public Todo updateTodo(@RequestBody Todo newTodo, @PathVariable Integer todoid) throws URISyntaxException{
+        Optional<Todo> todoUpdate = todoRepository.findById(todoid);
         if(todoUpdate.isPresent()){
-            newTodo.setTodoid(todoID);
+            newTodo.setTodoid(todoid);
             todoRepository.save(newTodo);
             return newTodo;
         }

@@ -1,116 +1,532 @@
-PUT http://localhost:8080/todos
+GET http://localhost:8080/todos/
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-<> 2019-02-22T105213.405.html
+{"description":"Starting forest fires","datestarted":"2019-03-02 06:06:06","completed":false,"user":{"userid":2,"username":"Jane"}}
+
+<> 2019-02-22T034753.200.json
+
+###
+
+POST http://localhost:8080/todos/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Starting forest fires","datestarted":"2019-03-02 06:06:06","completed":false,"user":{"userid":2,"username":"Jane"}}
+
+<> 2019-02-22T034705.200.json
+
+###
+
+GET http://localhost:8080/todos/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Brushing grandma's hair","datestarted":"2019-01-02 04:04:04","completed":false, "userid":2}
+
+<> 2019-02-22T034526.200.json
+
+###
+
+POST http://localhost:8080/todos/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Brushing grandma's hair","datestarted":"2019-01-02 04:04:04","completed":false, "userid":2}
+
+<> 2019-02-22T034047.500.json
+
+###
+
+POST http://localhost:8080/todos/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Brushing grandma's hair","datestarted":"2019-01-02 04:04:04","completed":false, "userid":2}
+
+<> 2019-02-22T033800.500.json
+
+###
+
+POST http://localhost:8080/todos/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Brushing grandma's hair","datestarted":"2019-01-02 04:04:04","completed":false, "userid":3}
+
+<> 2019-02-22T033710.500.json
+
+###
+
+POST http://localhost:8080/todos/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"todoid":2,"description":"Brushing grandma's hair","datestarted":"2019-01-02 04:04:04","completed":false}
+
+<> 2019-02-22T033424.500.json
 
 ###
 
 GET http://localhost:8080/todos/active
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-<> 2019-02-22T104119.200.json
+{"description":"Buying terrible silks for Aunt Mae","datestarted":"2019-01-03 04:04:04","completed":0}
 
-###
-
-GET http://localhost:8080/todos
-Accept: */*
-Cache-Control: no-cache
-
-<> 2019-02-22T104113.200.json
+<> 2019-02-22T033337.200.json
 
 ###
 
-GET http://localhost:8080/users/username/Bob
+POST http://localhost:8080/todos
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-<> 2019-02-22T095451.200.json
+{"description":"Buying terrible silks for Aunt Mae","datestarted":"2019-01-03 04:04:04","completed":0}
+
+<> 2019-02-22T032414.500.json
 
 ###
 
-GET http://localhost:8080/users/username/bob
+POST http://localhost:8080/todos
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Buying terrible silks for Aunt Mae","datestarted":"2019-01-03 04:04:04","completed":0, "user":1}
+
+<> 2019-02-22T032249.500.json
 
 ###
 
-GET http://localhost:8080/users/username/bob
+POST http://localhost:8080/todos
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Buying terrible silks for Aunt Mae","datestarted":"2019-01-03 04:04:04","completed":0}
+
+<> 2019-02-22T032141.500.json
 
 ###
 
-GET http://localhost:8080/users/username/Bob
+POST http://localhost:8080/todos
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-<> 2019-02-22T095420.200.json
+{"description":"Buying terrible silks for Aunt Mae","datestarted":"2019-01-03 04:04:04","completed":0}
+
+<> 2019-02-22T031509.500.json
 
 ###
 
-GET http://localhost:8080/users/username/"Bob"
+POST http://localhost:8080/todos
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Buying terrible silks for Aunt Mae","datestarted":"2019-01-03 04:04:04","completed":"false"}
+
+<> 2019-02-22T031457.500.json
 
 ###
 
-GET http://localhost:8080/users
+POST http://localhost:8080/todos
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-<> 2019-02-22T095406.200.json
+{"description":"Buying terrible silks for Aunt Mae","datestarted":"2019-01-03 04:04:04","completed":"false"}
+
+<> 2019-02-22T030922.500.json
 
 ###
 
-GET http://localhost:8080/users/usesname/
+POST http://localhost:8080/todos
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Buying terrible silks for Aunt Mae","datestarted":"2019-01-03 04:04:04","completed":"0"}
+
+<> 2019-02-22T030757.500.json
 
 ###
 
-GET http://localhost:8080/users/usesname/Karen
+POST http://localhost:8080/todos
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Buying terrible silks for Aunt Mae","datestarted":"2019-01-03 04:04:04","completed":'0'}
+
+<> 2019-02-22T030744.500.json
 
 ###
 
-GET http://localhost:8080/users/usesname/Karen
+POST http://localhost:8080/todos
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Buying terrible silks for Aunt Mae","datestarted":"2019-01-03 04:04:04","completed":0}
+
+<> 2019-02-22T030702.500.json
 
 ###
 
-GET http://localhost:8080/users/usesname/Karen
+PUT http://localhost:8080/todos
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Buying terrible silks for Aunt Mae","datestarted":"2019-01-03 04:04:04","completed":0}
+
+<> 2019-02-22T030649.500.json
 
 ###
 
-GET http://localhost:8080/users/usesname/"Bob"
+DELETE http://localhost:8080/todos/todoid/3
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
+
+{"todoid":3,"description":"Eat the turtles","datestarted":"2019-03-01 04:04:04","completed":false}
+
+<> 2019-02-22T030412.200.json
 
 ###
 
-GET http://localhost:8080/users/usesname/Bob
+DELETE http://localhost:8080/users/userid/3
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
+
+{"todoid":3,"description":"Eat the turtles","datestarted":"2019-03-01 04:04:04","completed":false}
+
+<> 2019-02-22T030305.200.json
 
 ###
 
-GET http://localhost:8080/users
+PUT http://localhost:8080/todos/todoid/3
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
 
-<> 2019-02-22T095214.200.json
+{"todoid":3,"description":"Eat the turtles","datestarted":"2019-03-01 04:04:04","completed":false}
+
+<> 2019-02-22T030149.500.json
 
 ###
 
-GET http://localhost:8080/resources
+PUT http://localhost:8080/todos/todoid/3
 Accept: */*
 Cache-Control: no-cache
+Content-Type: application/json
+
+{"todoid":3,"description":"Eat the turtles","datestarted":"2019-03-01 04:04:04","completed":false}
+
+###
+
+PUT http://localhost:8080/todos/todoid/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"todoid":3,"description":"Eat the turtles","datestarted":"2019-03-01 04:04:04","completed":false}
+
+###
+
+PUT http://localhost:8080/todos/todoid/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"todoID":3,"description":"Feed the turtles","datestarted":"2019-03-01 04:04:04","completed":false}
+
+<> 2019-02-22T030031.500.json
+
+###
+
+PUT http://localhost:8080/todos/todoid/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"todoid":3,"description":"Feed the turtles","datestarted":"2019-03-01 04:04:04","completed":false}
+
+<> 2019-02-22T030014.500.json
+
+###
+
+PUT http://localhost:8080/todos/todoid/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"todoid":8,"description":"Feed the turtles","datestarted":"2019-03-01 04:04:04","completed":false}
+
+<> 2019-02-22T025956.500.json
+
+###
+
+PUT http://localhost:8080/todos/todoid/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"todoid":3,"description":"Feed the turtles","datestarted":"2019-03-01 04:04:04","completed":true}
+
+<> 2019-02-22T025902.500.json
+
+###
+
+PUT http://localhost:8080/todos/todoid/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Feed the turtles","datestarted":"2019-03-01 04:04:04","completed":true}
+
+<> 2019-02-22T025845.500.json
+
+###
+
+PUT http://localhost:8080/users/userid/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Ginger"}
+
+<> 2019-02-22T025706.200.json
+
+###
+
+PUT http://localhost:8080/users/userid/8
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"userid":8,"username":"Mildred"}
+
+###
+
+PUT http://localhost:8080/users/userid/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"userid":8,"username":"Mildred"}
+
+<> 2019-02-22T025637.200.json
+
+###
+
+PUT http://localhost:8080/users/userid/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"userid":8,"username":"Mildred"}
+
+<> 2019-02-22T025629.200.json
+
+###
+
+PUT http://localhost:8080/users/userid/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"userid":3,"username":"Mildred"}
+
+<> 2019-02-22T025618.200.json
+
+###
+
+POST http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Salting the earth","datestarted":"1805-06-06 06:06:06","completed":false}
+
+<> 2019-02-22T025407.500.json
+
+###
+
+POST http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Salting the earth","datestarted":"1805-06-06 06:06:06","completed":\'false\'}
+
+<> 2019-02-22T025338.500.json
+
+###
+
+POST http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Salting the earth","datestarted":"1805-06-06 06:06:06","completed":\"false\"}
+
+<> 2019-02-22T025304.500.json
+
+###
+
+POST http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Salting the earth","datestarted":"1805-06-06 06:06:06","completed":"1"}
+
+<> 2019-02-22T025231.500.json
+
+###
+
+POST http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Salting the earth","datestarted":"1805-06-06 06:06:06","completed": 1}
+
+<> 2019-02-22T025219.500.json
+
+###
+
+POST http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Salting the earth","datestarted":"1805-06-06 06:06:06","completed":1}
+
+<> 2019-02-22T025137.500.json
+
+###
+
+POST http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Salting the earth","datestarted":"1805-06-06 06:06:06","completed":false}
+
+<> 2019-02-22T025128.500.json
+
+###
+
+POST http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Salting the earth","datestarted":"1805-06-06 06:06:06","completed":'false'}
+
+<> 2019-02-22T025117.500.json
+
+###
+
+POST http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Salting the earth","datestarted":"1805-06-06 06:06:06","completed":False}
+
+<> 2019-02-22T025102.500.json
+
+###
+
+POST http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"description":"Salting the earth","datestarted":"1805-06-06 06:06:06","completed":false}
+
+<> 2019-02-22T024916.500.json
+
+###
+
+POST http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"todoid":50,"description":"Salting the earth","datestarted":"1805-06-06 06:06:06","completed":false}
+
+<> 2019-02-22T024846.500.json
+
+###
+
+POST http://localhost:8080/users/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Mildred"}
+
+<> 2019-02-22T024615.200.json
+
+###
+
+POST http://localhost:8080/users/username/Jane
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Mildred"}
+
+<> 2019-02-22T024542.500.json
+
+###
+
+GET http://localhost:8080/users/username/Jane
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T024012.200.json
+
+###
+
+GET http://localhost:8080/users/userid/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T023952.500.json
+
+###
+
+GET http://localhost:8080/users/userid/2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T023944.500.json
+
+###
+
+GET http://localhost:8080/users/userid/2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T023909.500.json
 
 ###
 
