@@ -22,7 +22,7 @@ public class Todo {
 
     private Date datetime;
 
-    private Boolean completed;
+    private Integer completed;
 
     @ManyToOne
     @JoinColumn(name = "userid", nullable = false)
