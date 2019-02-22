@@ -20,7 +20,7 @@ public class Todo {
 
     private String datestarted;
 
-    private Integer completed;
+    private boolean completed;
 
     @ManyToOne
     @JoinColumn(name = "userid", nullable = false)

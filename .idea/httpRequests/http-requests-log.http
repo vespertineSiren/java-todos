@@ -1,0 +1,108 @@
+GET http://localhost:8080/todos/active
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T104119.200.json
+
+###
+
+GET http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T104113.200.json
+
+###
+
+GET http://localhost:8080/users/username/Bob
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T095451.200.json
+
+###
+
+GET http://localhost:8080/users/username/bob
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/users/username/bob
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/users/username/Bob
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T095420.200.json
+
+###
+
+GET http://localhost:8080/users/username/"Bob"
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/users
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T095406.200.json
+
+###
+
+GET http://localhost:8080/users/usesname/
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/users/usesname/Karen
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/users/usesname/Karen
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/users/usesname/Karen
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/users/usesname/"Bob"
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/users/usesname/Bob
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/users
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-02-22T095214.200.json
+
+###
+
+GET http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+
+###
+

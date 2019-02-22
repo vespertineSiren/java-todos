@@ -1,0 +1,20 @@
+[
+  {
+    "todoid": 1,
+    "description": "Finish java-orders-swagger",
+    "datestarted": "2019-01-13 04:04:04",
+    "completed": false
+  },
+  {
+    "todoid": 3,
+    "description": "Feed the turtles",
+    "datestarted": "2019-03-01 04:04:04",
+    "completed": false
+  },
+  {
+    "todoid": 4,
+    "description": "Complete the sprint challenge",
+    "datestarted": "2019-02-22 04:04:04",
+    "completed": false
+  }
+]
