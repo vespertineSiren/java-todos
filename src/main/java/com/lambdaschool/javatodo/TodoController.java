@@ -7,12 +7,11 @@ import com.lambdaschool.javatodo.Repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.net.URISyntaxException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = {}, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -59,6 +58,52 @@ public class TodoController {
         return todoRepository.findByUncompleted();
    }
 
+   @PostMapping("/users")
+    public Users addANewUser(@RequestBody Users users) throws URISyntaxException{
+        return userRepository.save(users);
+   }
+
+   @PostMapping("/todos")
+    public Todo addANewTodo(@RequestBody Todo todo) throws URISyntaxException {
+        return todoRepository.save(todo);
+   }
+
+    @PutMapping("/users/userid/{userid}")
+    public Users updateUser(@RequestBody Users newUser, @PathVariable Integer userid) throws URISyntaxException{
+        Optional<Users> userUpdate = userRepository.findById(userid);
+        if(userUpdate.isPresent()){
+            newUser.setUserid(userid);
+            userRepository.save(newUser);
+            return newUser;
+        }
+        return null;
+    }
+
+    @PutMapping("/todos/todoid/{todoid}")
+    public Todo updateTodo(@RequestBody Todo newTodo, @PathVariable Integer todoID) throws URISyntaxException{
+        Optional<Todo> todoUpdate = todoRepository.findById(todoID);
+        if(todoUpdate.isPresent()){
+            newTodo.setTodoid(todoID);
+            todoRepository.save(newTodo);
+            return newTodo;
+        }
+        return null;
+    }
+
+//    @DeleteMapping("/users/userid/{userid}")
+//    public Users deleteUserByID(@PathVariable int userid) {
+//        var foundUser = userRepository.findById(userid);
+//        if (foundUser.isPresent()) {
+//            List<Todo> todosFromUser = todoRepository;
+//            for (Todo todo : todosFromUser) {
+//                todoRepository.deleteById(todo.getTodoid());
+//            }
+//            userRepository.deleteById(userid);
+//            return foundUser.get();
+//        } else {
+//            return null;
+//        }
+//    }
 
 
 }

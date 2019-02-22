@@ -15,4 +15,8 @@ public interface TodoRepository extends JpaRepository<Todo, Integer> {
 
     @Query(value = "SELECT * FROM todo WHERE todo.completed = 0", nativeQuery = true)
     List<Todo> findByUncompleted();
+
+//    @Query(value ="SELECT * ")
+
+
 }
