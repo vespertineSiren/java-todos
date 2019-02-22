@@ -90,20 +90,30 @@ public class TodoController {
         return null;
     }
 
-//    @DeleteMapping("/users/userid/{userid}")
-//    public Users deleteUserByID(@PathVariable int userid) {
-//        var foundUser = userRepository.findById(userid);
-//        if (foundUser.isPresent()) {
-//            List<Todo> todosFromUser = todoRepository;
-//            for (Todo todo : todosFromUser) {
-//                todoRepository.deleteById(todo.getTodoid());
-//            }
-//            userRepository.deleteById(userid);
-//            return foundUser.get();
-//        } else {
-//            return null;
-//        }
-//    }
+    @DeleteMapping("/users/userid/{userid}")
+    public Users deleteUserByID(@PathVariable int userid) {
+        var foundUser = userRepository.findById(userid);
+        if (foundUser.isPresent()) {
+            List<Todo> todosFromUser = todoRepository.getUserTodos(userid);
+            for (Todo todo : todosFromUser) {
+                todoRepository.deleteById(todo.getTodoid());
+            }
+            userRepository.deleteById(userid);
+            return foundUser.get();
+        } else {
+            return null;
+        }
+    }
+
+    @DeleteMapping("/todos/todoid/{todoid}")
+    public Todo deleteTodoByTodoid(@PathVariable Integer todoid){
+        var foundTodo = todoRepository.findById(todoid);
+        if(foundTodo.isPresent()){
+            todoRepository.deleteById(todoid);
+            return foundTodo.get();
+        }
+        return null;
+    }
 
 
 }
