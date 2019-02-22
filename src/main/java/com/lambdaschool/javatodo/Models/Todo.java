@@ -20,8 +20,6 @@ public class Todo {
 
     private String datestarted;
 
-    private Date datetime;
-
     private Integer completed;
 
     @ManyToOne
